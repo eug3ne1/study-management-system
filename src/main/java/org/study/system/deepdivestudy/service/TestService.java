@@ -21,7 +21,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TestService {
     private final TestRepository testRepository;
-    private final AnswerRepository answerRepository;
     private final LectureRepository lectureRepository;
     private final CourseService courseService;
     private final UserService userService;

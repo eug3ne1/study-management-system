@@ -21,7 +21,6 @@ public class StudentTestService {
 
     private final TestRepository testRepository;
     private final QuestionRepository questionRepository;
-    private final AnswerRepository answerRepository;
     private final TestGradeRepository gradeRepository;
     private final StudentService studentService;
     private final TestAttemptRepository attemptRepository;

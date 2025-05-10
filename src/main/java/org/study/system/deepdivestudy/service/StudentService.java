@@ -1,5 +1,6 @@
 package org.study.system.deepdivestudy.service;
 
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import org.study.system.deepdivestudy.exceptions.AlreadyEnrolledException;
@@ -14,34 +15,21 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@AllArgsConstructor
 public class StudentService {
 
     private StudentRepository studentRepository;
     private CourseRepository courseRepository;
-    private UniversityRepository universityRepository;
-    private TestRepository testRepository;
-    private TestGradeRepository gradeRepository;
     private UserService userService;
 
-    public StudentService(CourseRepository courseRepository, TestGradeRepository gradeRepository,
-                          StudentRepository studentRepository, TestRepository testRepository,
-                          UniversityRepository universityRepository, UserService userService) {
-        this.courseRepository = courseRepository;
-        this.gradeRepository = gradeRepository;
-        this.studentRepository = studentRepository;
-        this.testRepository = testRepository;
-        this.universityRepository = universityRepository;
-        this.userService = userService;
-    }
+
 
     public Student getStudentByJWT(String jwt){
         User userByJWT = userService.getUserByJWT(jwt);
         return studentRepository.findByUser(userByJWT);
     }
 
-    public List<Student> getAllStudents(){
-        return studentRepository.findAll();
-    }
+
     public Course addStudentToCourse(Long courseId, Student student){
         Optional<Course> CourseById = courseRepository.findById(courseId);
         if(CourseById.isPresent()){
@@ -56,8 +44,5 @@ public class StudentService {
         }
 
     }
-    public void removeStudentFromCourse(Course course, Student student){
-        course.getStudents().remove(student);
-        courseRepository.save(course);
-    }
+
 }
