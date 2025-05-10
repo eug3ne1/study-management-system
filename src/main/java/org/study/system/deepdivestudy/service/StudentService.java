@@ -1,11 +1,11 @@
 package org.study.system.deepdivestudy.service;
 
 import org.springframework.stereotype.Service;
-import org.study.system.deepdivestudy.dto.TestGradeDTO;
+
 import org.study.system.deepdivestudy.exceptions.AlreadyEnrolledException;
 import org.study.system.deepdivestudy.exceptions.CourseNotFoundException;
 import org.study.system.deepdivestudy.model.course.Course;
-import org.study.system.deepdivestudy.model.testing.TestGrade;
+
 import org.study.system.deepdivestudy.model.users.Student;
 import org.study.system.deepdivestudy.model.users.User;
 import org.study.system.deepdivestudy.repository.*;

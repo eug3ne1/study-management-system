@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.study.system.deepdivestudy.dto.TeacherDTO;
 import org.study.system.deepdivestudy.dto.UniversityDTO;
 import org.study.system.deepdivestudy.model.University;

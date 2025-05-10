@@ -1,14 +1,8 @@
 package org.study.system.deepdivestudy.service;
 
 import org.springframework.stereotype.Component;
-import org.study.system.deepdivestudy.dto.QuestionResponse;
 import org.study.system.deepdivestudy.dto.TestResponse;
 import org.study.system.deepdivestudy.model.testing.Test;
-import org.study.system.deepdivestudy.model.testing.Question;
-import org.study.system.deepdivestudy.model.testing.Answer;
-
-
-import java.util.List;
 import java.util.stream.Collectors;
 
 @Component

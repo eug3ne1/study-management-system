@@ -2,7 +2,6 @@ package org.study.system.deepdivestudy.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 import org.study.system.deepdivestudy.model.testing.*;

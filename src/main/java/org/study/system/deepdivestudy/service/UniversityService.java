@@ -1,12 +1,12 @@
 package org.study.system.deepdivestudy.service;
 
 import org.springframework.stereotype.Service;
-import org.study.system.deepdivestudy.dto.TeacherDTO;
+
 import org.study.system.deepdivestudy.dto.UniversityDTO;
 import org.study.system.deepdivestudy.model.University;
 import org.study.system.deepdivestudy.repository.UniversityRepository;
 
-import java.util.List;
+
 import java.util.Optional;
 
 @Service

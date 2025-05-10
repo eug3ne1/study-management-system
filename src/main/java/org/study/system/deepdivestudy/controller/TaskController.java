@@ -6,9 +6,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.study.system.deepdivestudy.dto.LectureDTO;
 import org.study.system.deepdivestudy.dto.TaskDTO;
-import org.study.system.deepdivestudy.model.course.Lecture;
 import org.study.system.deepdivestudy.model.task.Task;
 import org.study.system.deepdivestudy.service.TaskService;
 

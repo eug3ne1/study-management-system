@@ -3,7 +3,6 @@ package org.study.system.deepdivestudy.model.task;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import org.study.system.deepdivestudy.model.testing.Test;
 import org.study.system.deepdivestudy.model.users.Student;
 
 @Entity

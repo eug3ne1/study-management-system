@@ -9,7 +9,6 @@ import org.study.system.deepdivestudy.exceptions.DeadlineExpiredException;
 import org.study.system.deepdivestudy.exceptions.TaskNotFoundException;
 import org.study.system.deepdivestudy.model.course.Course;
 import org.study.system.deepdivestudy.model.course.FilePath;
-import org.study.system.deepdivestudy.model.course.Lecture;
 import org.study.system.deepdivestudy.model.task.Task;
 import org.study.system.deepdivestudy.model.task.TaskSubmission;
 import org.study.system.deepdivestudy.model.users.Student;
@@ -22,7 +21,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
+
 
 @Service
 @AllArgsConstructor

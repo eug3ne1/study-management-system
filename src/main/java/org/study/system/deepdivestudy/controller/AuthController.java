@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.study.system.deepdivestudy.config.JwtUtils;
 import org.study.system.deepdivestudy.dto.auth.AuthResponse;
 import org.study.system.deepdivestudy.dto.auth.LoginRequest;
-import org.study.system.deepdivestudy.dto.auth.RoleSelectRequest;
 import org.study.system.deepdivestudy.dto.auth.SignupRequest;
-import org.study.system.deepdivestudy.model.users.User;
 import org.study.system.deepdivestudy.service.AuthService;
 import org.study.system.deepdivestudy.service.UserService;
 

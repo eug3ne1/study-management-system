@@ -1,7 +1,6 @@
 package org.study.system.deepdivestudy.service;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 import org.study.system.deepdivestudy.dto.*;
@@ -11,7 +10,6 @@ import org.study.system.deepdivestudy.model.course.Course;
 import org.study.system.deepdivestudy.model.testing.Answer;
 import org.study.system.deepdivestudy.model.testing.Question;
 import org.study.system.deepdivestudy.model.testing.Test;
-import org.study.system.deepdivestudy.model.users.Student;
 import org.study.system.deepdivestudy.model.users.Teacher;
 import org.study.system.deepdivestudy.model.users.User;
 import org.study.system.deepdivestudy.repository.*;

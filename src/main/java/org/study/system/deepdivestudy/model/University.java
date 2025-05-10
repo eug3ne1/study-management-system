@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 import org.study.system.deepdivestudy.model.users.Student;
 import org.study.system.deepdivestudy.model.users.Teacher;
-import org.study.system.deepdivestudy.model.users.User;
 
 import java.util.List;
 

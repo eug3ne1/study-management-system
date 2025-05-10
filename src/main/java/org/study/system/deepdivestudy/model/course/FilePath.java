@@ -1,6 +1,5 @@
 package org.study.system.deepdivestudy.model.course;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 

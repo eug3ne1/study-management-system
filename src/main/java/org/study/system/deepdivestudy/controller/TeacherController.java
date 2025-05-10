@@ -15,7 +15,6 @@ import org.study.system.deepdivestudy.service.TeacherService;
 public class TeacherController {
     TeacherService teacherService;
     CourseRepository courseRepository;
-    TestRepository testRepository;
 
 
     @GetMapping("/{id}")

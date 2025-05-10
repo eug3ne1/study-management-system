@@ -3,9 +3,7 @@ package org.study.system.deepdivestudy.config;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
-import jakarta.annotation.PostConstruct;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+import lombok.AllArgsConstructor;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -15,9 +13,9 @@ import javax.crypto.SecretKey;
 import java.util.Collection;
 import java.util.Date;
 @Component
+@AllArgsConstructor
 public class JwtUtils {
 
-    @Autowired
     public JwtConstant jwtConstant;
 
 

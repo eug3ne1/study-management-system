@@ -3,7 +3,6 @@ package org.study.system.deepdivestudy.model.course;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.springframework.core.metrics.StartupStep;
 import org.study.system.deepdivestudy.model.Tag;
 import org.study.system.deepdivestudy.model.task.Task;
 import org.study.system.deepdivestudy.model.testing.Test;

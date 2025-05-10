@@ -1,5 +1,6 @@
 package org.study.system.deepdivestudy.service;
 
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.study.system.deepdivestudy.dto.TeacherDTO;
 import org.study.system.deepdivestudy.exceptions.TeacherNotFoundException;
@@ -7,20 +8,16 @@ import org.study.system.deepdivestudy.model.users.Teacher;
 import org.study.system.deepdivestudy.model.users.User;
 import org.study.system.deepdivestudy.repository.TeacherRepository;
 
-import java.nio.file.attribute.UserPrincipalNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
+
 
 @Service
+@AllArgsConstructor
 public class TeacherService {
     private TeacherRepository teacherRepository;
     private UserService userService;
 
-    public TeacherService(TeacherRepository teacherRepository, UserService userService) {
-        this.teacherRepository = teacherRepository;
-        this.userService = userService;
-    }
 
     public Teacher getTeacherByJWT(String jwt){
         User userByJWT = userService.getUserByJWT(jwt);

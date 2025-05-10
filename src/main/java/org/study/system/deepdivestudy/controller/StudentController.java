@@ -25,16 +25,7 @@ public class StudentController {
     private final StudentService studentService;
     private final CourseService courseService;
     private final StudentTestService studentTestService;
-    private final GradeService gradeService;
 
-
-
-//    @GetMapping("/{courseId}")
-//    public List<CourseGradeResponse> getAllStudentGradesByCourse(@PathVariable Long courseId,
-//                                                                 @RequestHeader("Authorization") String jwt){
-//        Student student = studentService.getStudentByJWT(jwt);
-//        return gradeService.getGradesByStudentCourse(student, courseId);
-//    }
 
     @GetMapping("/courses")
     public ResponseEntity<List<CourseDTO>> getAllStudentCourses(@RequestHeader("Authorization") String jwt){

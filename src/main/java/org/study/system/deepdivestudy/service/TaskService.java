@@ -8,7 +8,7 @@ import org.study.system.deepdivestudy.dto.TaskDTO;
 import org.study.system.deepdivestudy.exceptions.CourseNotFoundException;
 import org.study.system.deepdivestudy.model.course.Course;
 import org.study.system.deepdivestudy.model.course.FilePath;
-import org.study.system.deepdivestudy.model.course.Lecture;
+
 import org.study.system.deepdivestudy.model.task.Task;
 import org.study.system.deepdivestudy.model.users.Teacher;
 import org.study.system.deepdivestudy.repository.CourseRepository;
@@ -69,7 +69,6 @@ public class TaskService {
         task.setEndTime(taskDTO.getEndTime());
         return taskRepository.save(task);
     }
-
 
 
     public String uploadPdf(Long taskId, MultipartFile file, String jwt) {

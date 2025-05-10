@@ -1,6 +1,5 @@
 package org.study.system.deepdivestudy.exceptions;
 
-import org.apache.coyote.BadRequestException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;

@@ -6,15 +6,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.study.system.deepdivestudy.dto.LectureDTO;
-import org.study.system.deepdivestudy.model.course.Lecture;
 import org.study.system.deepdivestudy.model.task.TaskSubmission;
 import org.study.system.deepdivestudy.model.users.Student;
 import org.study.system.deepdivestudy.service.StudentService;
 import org.study.system.deepdivestudy.service.TaskSubmissionService;
-
 import java.util.List;
-import java.util.Optional;
+
 
 @RestController
 @RequestMapping("api/task-submission")

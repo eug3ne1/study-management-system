@@ -18,7 +18,6 @@ import org.study.system.deepdivestudy.service.TeacherService;
 import org.study.system.deepdivestudy.service.UniversityService;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
@@ -27,7 +26,6 @@ import java.util.stream.Collectors;
 public class CourseController {
 
     private final CourseService courseService;
-    private final UserRepository userRepository;
     private final TeacherService teacherService;
     private final UniversityService universityService;
 

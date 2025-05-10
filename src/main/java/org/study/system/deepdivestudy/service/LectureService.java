@@ -13,8 +13,6 @@ import org.study.system.deepdivestudy.model.users.Teacher;
 import org.study.system.deepdivestudy.repository.CourseRepository;
 import org.study.system.deepdivestudy.repository.FilePathRepository;
 import org.study.system.deepdivestudy.repository.LectureRepository;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,7 +24,6 @@ public class LectureService {
     private CourseRepository courseRepository;
     private StorageService storageService;
     private TeacherService teacherService;
-    private FilePathRepository filePathRepository;
 
 
     public Lecture createLecture(LectureDTO lectureDTO, String jwt) {
