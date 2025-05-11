@@ -1,9 +1,9 @@
-package org.study.system.deepdivestudy.model.course;
+package org.study.system.deepdivestudy.entity.course;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
-import org.study.system.deepdivestudy.model.testing.Test;
+import org.study.system.deepdivestudy.entity.testing.Test;
 
 import java.util.ArrayList;
 import java.util.List;

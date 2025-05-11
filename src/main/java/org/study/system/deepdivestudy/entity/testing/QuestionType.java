@@ -1,4 +1,4 @@
-package org.study.system.deepdivestudy.model.testing;
+package org.study.system.deepdivestudy.entity.testing;
 
 public enum QuestionType {
     SINGLE_CHOICE,

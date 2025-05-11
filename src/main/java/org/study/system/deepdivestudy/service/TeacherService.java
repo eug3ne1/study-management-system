@@ -4,8 +4,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.study.system.deepdivestudy.dto.TeacherDTO;
 import org.study.system.deepdivestudy.exceptions.TeacherNotFoundException;
-import org.study.system.deepdivestudy.model.users.Teacher;
-import org.study.system.deepdivestudy.model.users.User;
+import org.study.system.deepdivestudy.entity.users.Teacher;
+import org.study.system.deepdivestudy.entity.users.User;
 import org.study.system.deepdivestudy.repository.TeacherRepository;
 
 import java.util.ArrayList;

@@ -1,7 +1,7 @@
 package org.study.system.deepdivestudy.dto.auth;
 
 import lombok.Data;
-import org.study.system.deepdivestudy.model.users.RoleName;
+import org.study.system.deepdivestudy.entity.users.RoleName;
 
 @Data
 public class SignupRequest {

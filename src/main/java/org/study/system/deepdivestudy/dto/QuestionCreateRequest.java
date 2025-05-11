@@ -1,7 +1,7 @@
 package org.study.system.deepdivestudy.dto;
 
 import lombok.Data;
-import org.study.system.deepdivestudy.model.testing.QuestionType;
+import org.study.system.deepdivestudy.entity.testing.QuestionType;
 
 import java.util.List;
 

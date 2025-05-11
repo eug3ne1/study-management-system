@@ -1,18 +1,15 @@
-package org.study.system.deepdivestudy.model;
+package org.study.system.deepdivestudy.entity.course;
 
 import jakarta.persistence.*;
 import lombok.Data;
 
-
 @Entity
 @Data
-@Table(name = "tags")
-public class Tag {
+public class FilePath {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private String name;
-
+    private String path;
 
 }

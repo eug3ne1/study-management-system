@@ -1,9 +1,9 @@
-package org.study.system.deepdivestudy.model.task;
+package org.study.system.deepdivestudy.entity.task;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.study.system.deepdivestudy.model.course.FilePath;
-import org.study.system.deepdivestudy.model.users.Student;
+import org.study.system.deepdivestudy.entity.course.FilePath;
+import org.study.system.deepdivestudy.entity.users.Student;
 
 import java.util.ArrayList;
 import java.util.List;

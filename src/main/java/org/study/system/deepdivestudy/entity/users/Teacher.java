@@ -1,11 +1,11 @@
-package org.study.system.deepdivestudy.model.users;
+package org.study.system.deepdivestudy.entity.users;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.study.system.deepdivestudy.model.University;
-import org.study.system.deepdivestudy.model.course.Course;
+import org.study.system.deepdivestudy.entity.University;
+import org.study.system.deepdivestudy.entity.course.Course;
 
 import java.util.ArrayList;
 import java.util.List;

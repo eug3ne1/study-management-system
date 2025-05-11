@@ -7,7 +7,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import org.study.system.deepdivestudy.model.users.User;
+import org.study.system.deepdivestudy.entity.users.User;
 import org.study.system.deepdivestudy.repository.UserRepository;
 import java.util.List;
 

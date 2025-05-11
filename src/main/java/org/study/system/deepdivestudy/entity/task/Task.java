@@ -1,10 +1,10 @@
-package org.study.system.deepdivestudy.model.task;
+package org.study.system.deepdivestudy.entity.task;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
-import org.study.system.deepdivestudy.model.course.Course;
-import org.study.system.deepdivestudy.model.course.FilePath;
+import org.study.system.deepdivestudy.entity.course.Course;
+import org.study.system.deepdivestudy.entity.course.FilePath;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

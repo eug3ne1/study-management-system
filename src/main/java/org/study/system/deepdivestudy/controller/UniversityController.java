@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.study.system.deepdivestudy.dto.TeacherDTO;
 import org.study.system.deepdivestudy.dto.UniversityDTO;
-import org.study.system.deepdivestudy.model.University;
+import org.study.system.deepdivestudy.entity.University;
 import org.study.system.deepdivestudy.service.TeacherService;
 import org.study.system.deepdivestudy.service.UniversityService;
 

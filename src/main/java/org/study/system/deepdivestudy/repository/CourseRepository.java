@@ -3,10 +3,10 @@ package org.study.system.deepdivestudy.repository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
-import org.study.system.deepdivestudy.model.Tag;
-import org.study.system.deepdivestudy.model.course.Course;
-import org.study.system.deepdivestudy.model.users.Student;
-import org.study.system.deepdivestudy.model.users.Teacher;
+import org.study.system.deepdivestudy.entity.Tag;
+import org.study.system.deepdivestudy.entity.course.Course;
+import org.study.system.deepdivestudy.entity.users.Student;
+import org.study.system.deepdivestudy.entity.users.Teacher;
 
 import java.util.List;
 

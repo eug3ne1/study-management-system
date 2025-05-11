@@ -9,7 +9,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import org.study.system.deepdivestudy.dto.auth.ProfileResponse;
 import org.study.system.deepdivestudy.dto.auth.UpdateProfileRequest;
-import org.study.system.deepdivestudy.model.users.*;
+import org.study.system.deepdivestudy.entity.users.*;
 import org.study.system.deepdivestudy.service.UserService;
 
 import java.security.Principal;

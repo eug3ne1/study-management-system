@@ -3,7 +3,7 @@ package org.study.system.deepdivestudy.service;
 import org.springframework.stereotype.Service;
 
 import org.study.system.deepdivestudy.dto.UniversityDTO;
-import org.study.system.deepdivestudy.model.University;
+import org.study.system.deepdivestudy.entity.University;
 import org.study.system.deepdivestudy.repository.UniversityRepository;
 
 

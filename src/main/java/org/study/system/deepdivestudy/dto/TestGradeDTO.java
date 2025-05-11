@@ -1,8 +1,8 @@
 package org.study.system.deepdivestudy.dto;
 
 import lombok.Data;
-import org.study.system.deepdivestudy.model.testing.Test;
-import org.study.system.deepdivestudy.model.users.Student;
+import org.study.system.deepdivestudy.entity.testing.Test;
+import org.study.system.deepdivestudy.entity.users.Student;
 
 @Data
 public class TestGradeDTO {

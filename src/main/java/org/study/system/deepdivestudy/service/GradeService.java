@@ -4,12 +4,12 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.study.system.deepdivestudy.dto.TaskGradeDTO;
 import org.study.system.deepdivestudy.dto.TestGradeDTO;
-import org.study.system.deepdivestudy.model.course.Course;
-import org.study.system.deepdivestudy.model.task.Task;
-import org.study.system.deepdivestudy.model.task.TaskGrade;
-import org.study.system.deepdivestudy.model.testing.TestGrade;
-import org.study.system.deepdivestudy.model.testing.Test;
-import org.study.system.deepdivestudy.model.users.Student;
+import org.study.system.deepdivestudy.entity.course.Course;
+import org.study.system.deepdivestudy.entity.task.Task;
+import org.study.system.deepdivestudy.entity.task.TaskGrade;
+import org.study.system.deepdivestudy.entity.testing.TestGrade;
+import org.study.system.deepdivestudy.entity.testing.Test;
+import org.study.system.deepdivestudy.entity.users.Student;
 import org.study.system.deepdivestudy.repository.TaskGradeRepository;
 import org.study.system.deepdivestudy.repository.TestGradeRepository;
 

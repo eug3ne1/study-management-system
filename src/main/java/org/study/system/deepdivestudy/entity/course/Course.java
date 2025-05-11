@@ -1,13 +1,13 @@
-package org.study.system.deepdivestudy.model.course;
+package org.study.system.deepdivestudy.entity.course;
 
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.study.system.deepdivestudy.model.Tag;
-import org.study.system.deepdivestudy.model.task.Task;
-import org.study.system.deepdivestudy.model.testing.Test;
-import org.study.system.deepdivestudy.model.users.Student;
-import org.study.system.deepdivestudy.model.users.Teacher;
+import org.study.system.deepdivestudy.entity.Tag;
+import org.study.system.deepdivestudy.entity.task.Task;
+import org.study.system.deepdivestudy.entity.testing.Test;
+import org.study.system.deepdivestudy.entity.users.Student;
+import org.study.system.deepdivestudy.entity.users.Teacher;
 
 import java.util.ArrayList;
 import java.util.List;

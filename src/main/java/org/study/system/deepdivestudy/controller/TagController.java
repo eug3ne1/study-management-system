@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.study.system.deepdivestudy.model.Tag;
+import org.study.system.deepdivestudy.entity.Tag;
 import org.study.system.deepdivestudy.repository.TagRepository;
 
 import java.util.List;

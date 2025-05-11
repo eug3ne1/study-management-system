@@ -5,13 +5,12 @@ import org.springframework.stereotype.Service;
 
 import org.study.system.deepdivestudy.exceptions.AlreadyEnrolledException;
 import org.study.system.deepdivestudy.exceptions.CourseNotFoundException;
-import org.study.system.deepdivestudy.model.course.Course;
+import org.study.system.deepdivestudy.entity.course.Course;
 
-import org.study.system.deepdivestudy.model.users.Student;
-import org.study.system.deepdivestudy.model.users.User;
+import org.study.system.deepdivestudy.entity.users.Student;
+import org.study.system.deepdivestudy.entity.users.User;
 import org.study.system.deepdivestudy.repository.*;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service

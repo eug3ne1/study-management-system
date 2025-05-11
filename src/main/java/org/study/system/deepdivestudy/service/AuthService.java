@@ -15,7 +15,7 @@ import org.study.system.deepdivestudy.dto.auth.AuthResponse;
 import org.study.system.deepdivestudy.dto.auth.LoginRequest;
 import org.study.system.deepdivestudy.dto.auth.SignupRequest;
 import org.study.system.deepdivestudy.exceptions.EmailAlreadyExistsException;
-import org.study.system.deepdivestudy.model.users.*;
+import org.study.system.deepdivestudy.entity.users.*;
 import org.study.system.deepdivestudy.repository.*;
 
 import java.util.List;

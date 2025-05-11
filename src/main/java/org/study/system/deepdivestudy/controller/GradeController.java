@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.study.system.deepdivestudy.dto.TaskGradeDTO;
 import org.study.system.deepdivestudy.dto.TestGradeDTO;
-import org.study.system.deepdivestudy.model.users.Student;
+import org.study.system.deepdivestudy.entity.users.Student;
 import org.study.system.deepdivestudy.service.GradeService;
 import org.study.system.deepdivestudy.service.StudentService;
 

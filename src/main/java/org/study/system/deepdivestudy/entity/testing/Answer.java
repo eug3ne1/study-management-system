@@ -1,4 +1,4 @@
-package org.study.system.deepdivestudy.model.testing;
+package org.study.system.deepdivestudy.entity.testing;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;

@@ -6,11 +6,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import org.study.system.deepdivestudy.dto.TaskDTO;
 import org.study.system.deepdivestudy.exceptions.CourseNotFoundException;
-import org.study.system.deepdivestudy.model.course.Course;
-import org.study.system.deepdivestudy.model.course.FilePath;
+import org.study.system.deepdivestudy.entity.course.Course;
+import org.study.system.deepdivestudy.entity.course.FilePath;
 
-import org.study.system.deepdivestudy.model.task.Task;
-import org.study.system.deepdivestudy.model.users.Teacher;
+import org.study.system.deepdivestudy.entity.task.Task;
+import org.study.system.deepdivestudy.entity.users.Teacher;
 import org.study.system.deepdivestudy.repository.CourseRepository;
 import org.study.system.deepdivestudy.repository.TaskRepository;
 

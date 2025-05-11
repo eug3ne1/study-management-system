@@ -2,7 +2,7 @@ package org.study.system.deepdivestudy.service;
 
 import org.springframework.stereotype.Component;
 import org.study.system.deepdivestudy.dto.TestResponse;
-import org.study.system.deepdivestudy.model.testing.Test;
+import org.study.system.deepdivestudy.entity.testing.Test;
 import java.util.stream.Collectors;
 
 @Component

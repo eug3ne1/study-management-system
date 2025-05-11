@@ -3,8 +3,8 @@ package org.study.system.deepdivestudy.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import org.study.system.deepdivestudy.model.users.Teacher;
-import org.study.system.deepdivestudy.model.users.User;
+import org.study.system.deepdivestudy.entity.users.Teacher;
+import org.study.system.deepdivestudy.entity.users.User;
 
 import java.util.List;
 

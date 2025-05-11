@@ -1,4 +1,4 @@
-package org.study.system.deepdivestudy.model.users;
+package org.study.system.deepdivestudy.entity.users;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

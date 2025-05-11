@@ -1,9 +1,9 @@
 package org.study.system.deepdivestudy.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.study.system.deepdivestudy.model.task.Task;
-import org.study.system.deepdivestudy.model.task.TaskSubmission;
-import org.study.system.deepdivestudy.model.users.Student;
+import org.study.system.deepdivestudy.entity.task.Task;
+import org.study.system.deepdivestudy.entity.task.TaskSubmission;
+import org.study.system.deepdivestudy.entity.users.Student;
 
 import java.util.List;
 import java.util.Optional;

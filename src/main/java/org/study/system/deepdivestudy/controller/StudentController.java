@@ -6,11 +6,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.study.system.deepdivestudy.dto.*;
 import org.study.system.deepdivestudy.exceptions.StudentNotFoundException;
-import org.study.system.deepdivestudy.model.course.Course;
-import org.study.system.deepdivestudy.model.course.Lecture;
-import org.study.system.deepdivestudy.model.users.Student;
+import org.study.system.deepdivestudy.entity.course.Course;
+import org.study.system.deepdivestudy.entity.course.Lecture;
+import org.study.system.deepdivestudy.entity.users.Student;
 import org.study.system.deepdivestudy.service.CourseService;
-import org.study.system.deepdivestudy.service.GradeService;
 import org.study.system.deepdivestudy.service.StudentService;
 import org.study.system.deepdivestudy.service.StudentTestService;
 

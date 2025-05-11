@@ -1,10 +1,10 @@
-package org.study.system.deepdivestudy.model;
+package org.study.system.deepdivestudy.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
-import org.study.system.deepdivestudy.model.users.Student;
-import org.study.system.deepdivestudy.model.users.Teacher;
+import org.study.system.deepdivestudy.entity.users.Student;
+import org.study.system.deepdivestudy.entity.users.Teacher;
 
 import java.util.List;
 

@@ -6,12 +6,12 @@ import org.springframework.stereotype.Service;
 import org.study.system.deepdivestudy.dto.*;
 import org.study.system.deepdivestudy.exceptions.ResourceNotFoundException;
 import org.study.system.deepdivestudy.exceptions.TestNotFoundException;
-import org.study.system.deepdivestudy.model.course.Course;
-import org.study.system.deepdivestudy.model.testing.Answer;
-import org.study.system.deepdivestudy.model.testing.Question;
-import org.study.system.deepdivestudy.model.testing.Test;
-import org.study.system.deepdivestudy.model.users.Teacher;
-import org.study.system.deepdivestudy.model.users.User;
+import org.study.system.deepdivestudy.entity.course.Course;
+import org.study.system.deepdivestudy.entity.testing.Answer;
+import org.study.system.deepdivestudy.entity.testing.Question;
+import org.study.system.deepdivestudy.entity.testing.Test;
+import org.study.system.deepdivestudy.entity.users.Teacher;
+import org.study.system.deepdivestudy.entity.users.User;
 import org.study.system.deepdivestudy.repository.*;
 
 import java.util.ArrayList;

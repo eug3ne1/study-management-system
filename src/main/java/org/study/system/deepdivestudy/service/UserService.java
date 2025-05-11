@@ -3,7 +3,7 @@ package org.study.system.deepdivestudy.service;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.study.system.deepdivestudy.config.JwtUtils;
-import org.study.system.deepdivestudy.model.users.User;
+import org.study.system.deepdivestudy.entity.users.User;
 import org.study.system.deepdivestudy.repository.UserRepository;
 
 @Service

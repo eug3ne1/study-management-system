@@ -1,27 +1,19 @@
-package org.study.system.deepdivestudy.model.testing;
+package org.study.system.deepdivestudy.entity.testing;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.study.system.deepdivestudy.model.users.Student;
-
-import java.time.LocalDateTime;
+import org.study.system.deepdivestudy.entity.users.Student;
 
 @Entity
 @Data
-@Table(name = "test_attempts")
-public class TestAttempt {
+@Table(name = "test_grades")
+public class TestGrade {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "attempt_id")
     private Long id;
 
-    private LocalDateTime submittedAt;
-
     private Double score;
-
-    private int correctAnswers;
-    private int totalQuestions;
 
     @ManyToOne
     @JoinColumn(name = "student_id", nullable = false)

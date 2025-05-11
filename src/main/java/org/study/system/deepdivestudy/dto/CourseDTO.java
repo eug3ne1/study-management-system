@@ -3,9 +3,9 @@ package org.study.system.deepdivestudy.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.study.system.deepdivestudy.model.Tag;
-import org.study.system.deepdivestudy.model.course.Course;
-import org.study.system.deepdivestudy.model.users.Student;
+import org.study.system.deepdivestudy.entity.Tag;
+import org.study.system.deepdivestudy.entity.course.Course;
+import org.study.system.deepdivestudy.entity.users.Student;
 
 import java.util.List;
 import java.util.stream.Collectors;

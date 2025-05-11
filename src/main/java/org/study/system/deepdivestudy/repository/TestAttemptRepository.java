@@ -3,9 +3,9 @@ package org.study.system.deepdivestudy.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import org.study.system.deepdivestudy.model.testing.Test;
-import org.study.system.deepdivestudy.model.testing.TestAttempt;
-import org.study.system.deepdivestudy.model.users.Student;
+import org.study.system.deepdivestudy.entity.testing.Test;
+import org.study.system.deepdivestudy.entity.testing.TestAttempt;
+import org.study.system.deepdivestudy.entity.users.Student;
 
 import java.util.List;
 

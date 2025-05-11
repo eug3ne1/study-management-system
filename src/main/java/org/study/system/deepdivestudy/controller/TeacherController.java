@@ -4,9 +4,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.study.system.deepdivestudy.model.users.Teacher;
+import org.study.system.deepdivestudy.entity.users.Teacher;
 import org.study.system.deepdivestudy.repository.CourseRepository;
-import org.study.system.deepdivestudy.repository.TestRepository;
 import org.study.system.deepdivestudy.service.TeacherService;
 
 @RestController()
