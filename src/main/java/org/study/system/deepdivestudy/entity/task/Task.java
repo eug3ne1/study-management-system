@@ -35,4 +35,6 @@ public class Task {
 
     private LocalDateTime endTime;
 
+    private Double maxGrade;
+
 }

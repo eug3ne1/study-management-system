@@ -40,6 +40,7 @@ public class TaskService {
         task.setDescription(taskDTO.getDescription());
         task.setStartTime(taskDTO.getStartTime());
         task.setEndTime(taskDTO.getEndTime());
+        task.setMaxGrade(taskDTO.getMaxGrade());
         task.setCourse(course);
         
         return taskRepository.save(task);
@@ -56,7 +57,7 @@ public class TaskService {
 
     public Task updateTask(Long taskId, TaskDTO taskDTO, String jwt) {
         Task task = taskRepository.findById(taskId)
-                .orElseThrow(() -> new RuntimeException("tasknot found"));
+                .orElseThrow(() -> new RuntimeException("task not found"));
 
         Teacher teacher = teacherService.getTeacherByJWT(jwt);
         if (!task.getCourse().getTeacher().getId().equals(teacher.getId())) {
@@ -67,6 +68,7 @@ public class TaskService {
         task.setDescription(taskDTO.getDescription());
         task.setStartTime(taskDTO.getStartTime());
         task.setEndTime(taskDTO.getEndTime());
+        task.setMaxGrade(taskDTO.getMaxGrade());
         return taskRepository.save(task);
     }
 
