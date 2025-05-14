@@ -43,12 +43,6 @@ public class TestController {
         return new ResponseEntity<>(createdTest, HttpStatus.CREATED);
     }
 
-    @PostMapping("/create-empty")
-    public ResponseEntity<Test> createEmptyTest(@RequestBody EmptyTestCreateRequest request,
-                                                @RequestHeader("Authorization") String jwt) {
-        Test createdTest = testService.createEmptyTest(request, jwt);
-        return new ResponseEntity<>(createdTest, HttpStatus.CREATED);
-    }
 
     @PostMapping("/{testId}/add-full-question")
     public ResponseEntity<QuestionResponse> addFullQuestion(
