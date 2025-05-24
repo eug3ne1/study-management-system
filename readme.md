@@ -10,11 +10,6 @@ REST API server for the **DeepDiveStudy** e-learning platform, implemented with 
 2. [Technologies](#technologies)
 3. [Prerequisites](#prerequisites)
 4. [Getting Started](#getting-started)
-5. [Configuration](#configuration)
-6. [Main Endpoints](#main-endpoints)
-7. [Request Examples](#request-examples)
-8. [Docker Deployment (Optional)](#docker-deployment-optional)
-9. [License](#license)
 
 ---
 
@@ -56,3 +51,5 @@ This repository contains the Spring Boot backend API.
    ```bash
    git clone https://github.com/your-org/deepdive-study-backend.git
    cd deepdive-study-backend
+   
+
