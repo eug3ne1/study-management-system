@@ -5,5 +5,4 @@ import org.study.system.deepdivestudy.entity.Tag;
 
 
 public interface TagRepository extends JpaRepository<Tag, Long> {
-    Tag findByName(String name);
 }

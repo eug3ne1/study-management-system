@@ -28,7 +28,6 @@ public class StudentService {
         return studentRepository.findByUser(userByJWT);
     }
 
-
     public Course addStudentToCourse(Long courseId, Student student){
         Optional<Course> CourseById = courseRepository.findById(courseId);
         if(CourseById.isPresent()){

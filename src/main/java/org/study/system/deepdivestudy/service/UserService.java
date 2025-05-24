@@ -13,13 +13,10 @@ public class UserService {
     private final UserRepository userRepository;
     private final JwtUtils jwtUtils;
 
-
-
     public User getUserByJWT(String jwt){
         String email = jwtUtils.getEmailFromToken(jwt);
         return userRepository.findByEmail(email);
     }
-
 
     public User findByEmail(String email) {
         return userRepository.findByEmail(email);

@@ -28,15 +28,12 @@ public class CourseService {
     private final StudentService studentService;
 
 
-
-
     public Course createCourse(CreateCourseRequest request, Long teacherId) {
         Course course = new Course();
         course.setName(request.getName());
         course.setDescription(request.getDescription());
-        course.setTags(request.getTagIds().stream().map(id-> {
-            return tagRepository.findById(id).orElseThrow(() -> new RuntimeException("Tag not found"));
-        }).toList());
+        course.setTags(request.getTagIds().stream().map(id-> tagRepository.findById(id).
+                orElseThrow(() -> new RuntimeException("Tag not found"))).toList());
         Teacher teacher = teacherRepository.findById(teacherId)
                 .orElseThrow(() -> new RuntimeException("Teacher not found"));
         course.setTeacher(teacher);
@@ -129,6 +126,5 @@ public class CourseService {
         course.getStudents().remove(student);        // owning side
         student.getEnrollments().remove(course);
         courseRepository.save(course);
-        studentRepository.save(student);
     }
 }

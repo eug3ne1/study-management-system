@@ -24,22 +24,20 @@ import java.util.List;
 public class SecurityConfiguration {
 
     private final JwtValidator jwtValidator;
-    private final CookieOAuth2AuthorizationRequestRepository cookieRepo;
     private final GoogleSuccessHandler googleSuccessHandler;
 
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http,
                                             CorsConfigurationSource corsConfigurationSource) throws Exception {
         http
-                // 1. OAuth2-login — без кастомного repo
+                // якщо вхід через Google ->
                 .oauth2Login(o -> o
                         .successHandler(googleSuccessHandler)
                         .failureHandler((req, resp, ex) -> resp.sendError(401, "Google auth failed"))
                 )
-                // 2. JWT-фильтр
                 .addFilterBefore(jwtValidator, BasicAuthenticationFilter.class)
-                .sessionManagement(m -> m.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                // 3. Авторизация
+                .sessionManagement(m -> m.sessionCreationPolicy
+                        (SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/auth/**", "/oauth2/**").permitAll()
                         .requestMatchers("/api/teacher/**").hasRole("TEACHER")
@@ -53,6 +51,7 @@ public class SecurityConfiguration {
 
         return http.build();
     }
+
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration cfg = new CorsConfiguration();

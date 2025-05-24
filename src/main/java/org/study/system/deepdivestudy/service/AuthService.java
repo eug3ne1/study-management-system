@@ -38,7 +38,6 @@ public class AuthService {
         if (userRepository.findByEmail(signupRequest.getEmail()) != null) {
             throw new EmailAlreadyExistsException("Email already exists with another account");
         }
-
         User user = new User();
         user.setEmail(signupRequest.getEmail());
 
@@ -51,7 +50,12 @@ public class AuthService {
         user.setRole(role);
         User savedUser = userRepository.save(user);
 
+        createEntityByRole(savedUser,role,signupRequest);
 
+        return generateAuthResponse(savedUser.getEmail(), role.getName().name());
+    }
+
+    private void createEntityByRole(User savedUser, Role role, SignupRequest signupRequest){
         if (role.getName() == RoleName.ROLE_TEACHER) {
             Teacher teacher = new Teacher();
             teacher.setUser(savedUser);
@@ -67,8 +71,6 @@ public class AuthService {
             student.setMiddleName(signupRequest.getMiddleName());
             studentRepository.save(student);
         }
-
-        return generateAuthResponse(savedUser.getEmail(), role.getName().name());
     }
 
     public AuthResponse login(LoginRequest loginRequest) {

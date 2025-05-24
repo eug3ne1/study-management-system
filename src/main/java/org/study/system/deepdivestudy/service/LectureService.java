@@ -79,7 +79,7 @@ public class LectureService {
     }
 
 
-    public String uploadPdf(Lecture lecture, MultipartFile file, String jwt) {
+    public void uploadPdf(Lecture lecture, MultipartFile file, String jwt) {
 
         Teacher teacher = teacherService.getTeacherByJWT(jwt);
         if (!lecture.getCourse().getTeacher().getId().equals(teacher.getId())) {
@@ -93,7 +93,6 @@ public class LectureService {
         lecture.getFilesUrl().add(filePath);
         lectureRepository.save(lecture);
 
-        return pdfUrl;
     }
 
 

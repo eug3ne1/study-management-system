@@ -28,8 +28,6 @@ public class CourseController {
     private final TeacherService teacherService;
     private final UniversityService universityService;
 
-
-
     @PostMapping("/create")
     public CourseDTO createCourse(@RequestBody CreateCourseRequest request,
                                   @RequestHeader("Authorization") String jwt) {

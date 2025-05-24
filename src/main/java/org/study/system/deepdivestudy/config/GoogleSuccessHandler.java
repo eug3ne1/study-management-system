@@ -26,11 +26,11 @@ public class GoogleSuccessHandler implements AuthenticationSuccessHandler {
     private final AuthService authService;
     private final JwtUtils jwtUtils;
 
+    @Value("${frontend.redirect}")
+    String redirect;
 
-    private final UserService userService;
-    @Value("${frontend.redirect}") String redirect;
-
-    @Value("${frontend.role.select.page}") String roleSelectPage;
+    @Value("${frontend.role.select.page}")
+    String roleSelectPage;
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest req,
@@ -41,17 +41,11 @@ public class GoogleSuccessHandler implements AuthenticationSuccessHandler {
 
         String role = authService.getRoleByEmail(email);
         if (role == null) {
-
             resp.sendRedirect(roleSelectPage + "?email=" + URLEncoder.encode(email, UTF_8));
             return;
         }
-
         var authorities = List.of((GrantedAuthority) () -> role);
-
-
-
         Authentication auth = new UsernamePasswordAuthenticationToken(email,null,authorities);
-
         String jwt = jwtUtils.generateToken(auth);
 
         resp.sendRedirect(redirect + "?token=" + jwt);

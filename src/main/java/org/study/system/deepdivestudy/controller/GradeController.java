@@ -20,36 +20,25 @@ public class GradeController {
     private final StudentService studentService;
 
 
-
     @GetMapping("/test/{courseId}")
-    public List<TestGradeDTO> getAllTestsGradesByCourse(@PathVariable Long courseId){
+    public List<TestGradeDTO> getAllTestsGradesByCourse(@PathVariable Long courseId) {
         return gradeService.getAllTestGradesByCourse(courseId);
     }
 
     @GetMapping("/task/{courseId}")
-    public List<TaskGradeDTO> getAllTasksGradesByCourse(@PathVariable Long courseId){
+    public List<TaskGradeDTO> getAllTasksGradesByCourse(@PathVariable Long courseId) {
         return gradeService.getAllTaskGradesByCourse(courseId);
     }
 
     @GetMapping("tests/course/{courseId}/student")
-    public ResponseEntity<List<TestGradeDTO>> getStudentTestGradesByCourse(@PathVariable Long courseId, @RequestHeader("Authorization") String jwt){
+    public ResponseEntity<List<TestGradeDTO>> getStudentTestGradesByCourse(@PathVariable Long courseId, @RequestHeader("Authorization") String jwt) {
         Student student = studentService.getStudentByJWT(jwt);
         return new ResponseEntity<>(gradeService.getStudentTestGrades(courseId, student.getId()), HttpStatus.OK);
     }
 
     @GetMapping("tasks/course/{courseId}/student")
-    public ResponseEntity<List<TaskGradeDTO>> getStudentTaskGradesByCourse(@PathVariable Long courseId, @RequestHeader("Authorization") String jwt){
+    public ResponseEntity<List<TaskGradeDTO>> getStudentTaskGradesByCourse(@PathVariable Long courseId, @RequestHeader("Authorization") String jwt) {
         Student student = studentService.getStudentByJWT(jwt);
         return new ResponseEntity<>(gradeService.getStudentTaskGrades(courseId, student.getId()), HttpStatus.OK);
     }
-
-
-
-
-
-
-
-
-
-
 }

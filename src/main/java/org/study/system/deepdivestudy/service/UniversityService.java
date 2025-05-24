@@ -26,6 +26,10 @@ public class UniversityService {
         return universityRepository.findAll();
     }
 
+    public void deleteById(Long id) {
+        universityRepository.deleteById(id);
+    }
+
     public void createUni(UniversityDTO universityDTO){
         University university = new University();
         university.setName(universityDTO.getName());
@@ -33,11 +37,4 @@ public class UniversityService {
         university.setCountryName(universityDTO.getCountry());
         universityRepository.save(university);
     }
-
-
-    public void deleteById(Long id) {
-        universityRepository.deleteById(id);
-    }
-
-
 }

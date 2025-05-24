@@ -110,16 +110,6 @@ public class TaskSubmissionService {
     }
 
 
-    public List<TaskSubmission> findByTask(Long taskId) {
-        return repo.findByTask_Id(taskId);
-    }
-
-
-    public List<TaskSubmission> findByStudent(Long studentId) {
-        return repo.findByStudent_Id(studentId);
-    }
-
-
     public TaskSubmission getById(Long id) {
         return repo.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Submission not found"));

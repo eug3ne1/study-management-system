@@ -24,25 +24,6 @@ public class GradeService {
     private final TaskGradeRepository taskGradeRepository;
     private final CourseService courseService;
 
-//    public List<CourseGradeResponse> getGradesByStudentCourse(Student student, Long courseId) {
-//        List<TestGrade> testGrades = gradeRepository.findByStudentUserIdAndCourseId(student.getId(),courseId);
-//        Course course = courseService.getCourseById(courseId);
-//        if(!course.getStudents().contains(student)){
-//            throw new AccessDeniedException("No such student in this course");
-//        }
-//
-//        return testGrades.stream().map(grade -> {
-//            Test test = grade.getTest();
-//
-//            return new CourseGradeResponse(
-//                    course.getName(),
-//                    test.getName(),
-//                    grade.getScore(),
-//                    test.getQuestions().stream().mapToDouble(q -> q.getValue() != null ? q.getValue() : 0).sum(),
-//                    test.getStartTime()
-//            );
-//        }).collect(Collectors.toList());
-//    }
 
     public List<TestGradeDTO> getAllTestGradesByCourse(Long courseId){
         Course courseById = courseService.getCourseById(courseId);

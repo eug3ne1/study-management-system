@@ -82,9 +82,4 @@ public class TaskController {
         taskService.deleteFile(taskId, fileId);
         return new ResponseEntity<>(HttpStatus.OK);
     }
-
-
-
-
-
 }

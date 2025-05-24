@@ -22,15 +22,12 @@ public class JwtUtils {
     public String generateToken(Authentication auth){
         Collection<? extends GrantedAuthority> authorities = auth.getAuthorities();
 
-        String authoritiesString = authorities.stream()
-                .map(GrantedAuthority::getAuthority)
+        String authoritiesString = authorities.stream().map(GrantedAuthority::getAuthority)
                 .reduce((a, b) -> a + "," + b)
                 .orElse("");
         SecretKey SECRETE_KEY = Keys.hmacShaKeyFor(jwtConstant.SECRETE_KEY.getBytes());
-
-        return Jwts.builder()
-                .setIssuedAt(new Date())
-                .setExpiration(new Date(new Date().getTime() + 86400000)) // 1 день
+        return Jwts.builder().setIssuedAt(new Date())
+                .setExpiration(new Date(new Date().getTime() + 86400000)) // token valid for 1 day
                 .claim("email", auth.getName())
                 .claim("authorities", authoritiesString)
                 .signWith(SECRETE_KEY)

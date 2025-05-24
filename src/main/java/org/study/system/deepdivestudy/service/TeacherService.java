@@ -33,7 +33,8 @@ public class TeacherService {
         List<Teacher> teacherList = teacherRepository.findAllByUniversityId(id);
         List<TeacherDTO> teacherDTOList = new ArrayList<>();
         for (Teacher teacher : teacherList) {
-            TeacherDTO teacherDTO = new TeacherDTO(teacher.getId(), teacher.getFirstName(), teacher.getLastName(),teacher.getMiddleName());
+            TeacherDTO teacherDTO = new TeacherDTO(teacher.getId(), teacher.getFirstName(),
+                    teacher.getLastName(),teacher.getMiddleName());
             teacherDTOList.add(teacherDTO);
         }
 

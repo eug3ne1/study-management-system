@@ -1,5 +1,6 @@
 package org.study.system.deepdivestudy.service;
 
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
@@ -27,28 +28,13 @@ public class TestService {
     private final QuestionRepository questionRepository;
     private final TeacherService teacherService;
 
-    public Test createEmptyTest(EmptyTestCreateRequest request, String jwt) {
-        authenticateTeacherByCourse(request.getCourseId(), jwt);
-        Test test = new Test();
-        test.setName(request.getName());
-        test.setDescription(request.getDescription());
-        test.setMaxAttempts(request.getMaxAttempts());
-        test.setStartTime(request.getStartTime());
-        test.setEndTime(request.getEndTime());
-        test.setCourse(courseService.getCourseById(request.getCourseId()));
-        if (request.getLectureId()!=null){
-            test.setLecture(lectureRepository.findById(request.getLectureId()).orElseThrow());
-        }
-
-        return testRepository.save(test);
-
-    }
 
     public TestResponse getById(Long id) {
         Test test = testRepository.findById(id).orElseThrow(() -> new TestNotFoundException("Test not found"));
         return TestMapper.toDto(test);
     }
 
+    @Transactional
     public TestResponse createTestFromRequest(TestDTO request, String jwt) {
         authenticateTeacherByCourse(request.getCourseId(), jwt);
         Test test = new Test();
@@ -57,9 +43,6 @@ public class TestService {
         test.setMaxAttempts(request.getMaxAttempts());
         test.setStartTime(request.getStartTime());
         test.setEndTime(request.getEndTime());
-
-
-
 
         List<Question> questions = new ArrayList<>();
 
@@ -83,7 +66,6 @@ public class TestService {
             question.setAnswers(answers);
             questions.add(question);
         }
-
         test.setQuestions(questions);
         Course course = courseService.getCourseById(request.getCourseId());
         test.setCourse(course);
@@ -216,8 +198,6 @@ public class TestService {
             throw new AccessDeniedException("No permission to create a test");
         }
     }
-
-
 
 
     public List<TestResponse> getTestsByCourseId(Long courseId) {
