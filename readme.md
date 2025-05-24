@@ -4,6 +4,8 @@ REST API server for the **DeepDiveStudy** e-learning platform, implemented with 
 
 ---
 
+frontend implementation - https://github.com/eug3ne1/study-management-system-front
+
 ## 📋 Table of Contents
 
 1. [Overview](#overview)
@@ -51,5 +53,6 @@ This repository contains the Spring Boot backend API.
    ```bash
    git clone https://github.com/your-org/deepdive-study-backend.git
    cd deepdive-study-backend
-   
+
+
 
