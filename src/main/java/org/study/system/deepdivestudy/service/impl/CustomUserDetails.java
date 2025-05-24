@@ -1,4 +1,4 @@
-package org.study.system.deepdivestudy.service;
+package org.study.system.deepdivestudy.service.impl;
 
 import lombok.AllArgsConstructor;
 

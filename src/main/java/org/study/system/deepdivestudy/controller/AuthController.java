@@ -13,7 +13,7 @@ import org.study.system.deepdivestudy.dto.auth.AuthResponse;
 import org.study.system.deepdivestudy.dto.auth.LoginRequest;
 import org.study.system.deepdivestudy.dto.auth.SignupRequest;
 import org.study.system.deepdivestudy.service.AuthService;
-import org.study.system.deepdivestudy.service.UserService;
+
 
 import java.io.IOException;
 
@@ -23,14 +23,12 @@ import java.io.IOException;
 public class AuthController {
 
     private final AuthService authService;
-    private final UserService userService;
-    private final JwtUtils jwtUtils;
     @Value("${frontend.redirect}") String redirect;
 
 
     @PostMapping("/signup")
     public ResponseEntity<AuthResponse> createUser(@RequestBody SignupRequest signupRequest) {
-        AuthResponse response = authService.register(signupRequest);
+        AuthResponse response = authService.signup(signupRequest);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
@@ -50,10 +48,7 @@ public class AuthController {
             HttpServletResponse resp
     ) throws IOException {
 
-        Authentication auth = authService.buildAuthentication(email, role);
-        authService.oAuth2SignUp(email,role);
-        String token = jwtUtils.generateToken(auth);
-
-        resp.sendRedirect(redirect + "?token=" + token);
+        String jwt = authService.oAuth2SignUp(email, role);
+        resp.sendRedirect(redirect + "?token=" + jwt);
     }
 }

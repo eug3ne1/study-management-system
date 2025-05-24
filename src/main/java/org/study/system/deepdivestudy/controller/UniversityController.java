@@ -10,6 +10,7 @@ import org.study.system.deepdivestudy.entity.University;
 import org.study.system.deepdivestudy.service.TeacherService;
 import org.study.system.deepdivestudy.service.UniversityService;
 
+
 import java.util.List;
 import java.util.Optional;
 
@@ -20,7 +21,6 @@ public class UniversityController {
 
     private final UniversityService universityService;
     private final TeacherService teacherService;
-
 
 
     @GetMapping("/{id}")

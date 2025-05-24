@@ -3,10 +3,14 @@ package org.study.system.deepdivestudy.service;
 import org.springframework.stereotype.Component;
 import org.study.system.deepdivestudy.dto.TestResponse;
 import org.study.system.deepdivestudy.entity.testing.Test;
+import org.study.system.deepdivestudy.service.impl.TestServiceImpl;
+
 import java.util.stream.Collectors;
 
 @Component
 public class TestMapper {
+
+
 
     public static TestResponse toDto(Test test) {
         TestResponse dto = new TestResponse();
@@ -23,7 +27,7 @@ public class TestMapper {
 
         if (test.getQuestions() != null) {
             dto.setQuestions(test.getQuestions().stream()
-                    .map(TestService::mapToQuestionResponse)
+                    .map(TestServiceImpl::mapToQuestionResponse)
                     .collect(Collectors.toList()));
         }
 

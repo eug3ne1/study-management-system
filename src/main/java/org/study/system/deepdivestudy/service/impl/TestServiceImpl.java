@@ -1,4 +1,4 @@
-package org.study.system.deepdivestudy.service;
+package org.study.system.deepdivestudy.service.impl;
 
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -14,27 +14,29 @@ import org.study.system.deepdivestudy.entity.testing.Test;
 import org.study.system.deepdivestudy.entity.users.Teacher;
 import org.study.system.deepdivestudy.entity.users.User;
 import org.study.system.deepdivestudy.repository.*;
+import org.study.system.deepdivestudy.service.*;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class TestService {
+public class TestServiceImpl implements TestService {
     private final TestRepository testRepository;
-    private final LectureRepository lectureRepository;
     private final CourseService courseService;
     private final UserService userService;
     private final QuestionRepository questionRepository;
     private final TeacherService teacherService;
 
-
+    @Override
     public TestResponse getById(Long id) {
         Test test = testRepository.findById(id).orElseThrow(() -> new TestNotFoundException("Test not found"));
         return TestMapper.toDto(test);
     }
 
     @Transactional
+    @Override
     public TestResponse createTestFromRequest(TestDTO request, String jwt) {
         authenticateTeacherByCourse(request.getCourseId(), jwt);
         Test test = new Test();
@@ -73,7 +75,8 @@ public class TestService {
 
         return TestMapper.toDto(savedTest);
     }
-
+    @Transactional
+    @Override
     public TestResponse updateTest(Long testId, TestDTO request, String jwt) {
 
         authenticateTeacherByCourse(request.getCourseId(), jwt);
@@ -123,7 +126,7 @@ public class TestService {
         return TestMapper.toDto(saved);
     }
 
-
+    @Override
     public QuestionResponse addFullQuestion(Long testId, QuestionCreateRequest request, String jwt) {
         User teacher = userService.getUserByJWT(jwt);
         Test test = testRepository.findById(testId)
@@ -199,13 +202,14 @@ public class TestService {
         }
     }
 
-
+    @Override
     public List<TestResponse> getTestsByCourseId(Long courseId) {
         Course courseById = courseService.getCourseById(courseId);
         List<Test> testsByCourse = testRepository.getTestsByCourse(courseById);
         return testsByCourse.stream().map((TestMapper::toDto)).toList();
     }
 
+    @Override
     public void deleteById(Long id) {
         testRepository.deleteById(id);
     }

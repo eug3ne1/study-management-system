@@ -9,6 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.study.system.deepdivestudy.dto.LectureDTO;
 import org.study.system.deepdivestudy.entity.course.Lecture;
 import org.study.system.deepdivestudy.service.LectureService;
+import org.study.system.deepdivestudy.service.impl.LectureServiceImpl;
 
 import java.util.List;
 
@@ -31,7 +32,6 @@ public class LectureController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-
     @PostMapping(
             value = "/create",
             consumes = MediaType.MULTIPART_FORM_DATA_VALUE
@@ -52,7 +52,6 @@ public class LectureController {
                 .status(HttpStatus.CREATED)
                 .body(lecture);
     }
-
 
     @PutMapping("/{id}/update")
     public ResponseEntity<Lecture> updateLecture(
@@ -78,16 +77,6 @@ public class LectureController {
         return ResponseEntity.noContent().build();
     }
 
-
-
-//    @PostMapping("/{lectureId}/upload-pdf")
-//    public ResponseEntity<String> uploadPdf(
-//            @PathVariable Long lectureId,
-//            @RequestParam("file") MultipartFile file,
-//            @RequestHeader("Authorization") String jwt) {
-//        String pdfUrl = lectureService.uploadPdf(lectureId, file,jwt);
-//        return ResponseEntity.ok(pdfUrl);
-//    }
 
     @DeleteMapping("/{lectureId}/file/{fileId}")
     public ResponseEntity<String> deleteFile(@PathVariable Long lectureId, @PathVariable Long fileId){

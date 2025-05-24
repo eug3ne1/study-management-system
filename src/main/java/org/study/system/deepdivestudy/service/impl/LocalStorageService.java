@@ -1,7 +1,8 @@
-package org.study.system.deepdivestudy.service;
+package org.study.system.deepdivestudy.service.impl;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+import org.study.system.deepdivestudy.service.StorageService;
 
 import java.io.IOException;
 import java.nio.file.Files;

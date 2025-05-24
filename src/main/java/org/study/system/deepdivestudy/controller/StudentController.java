@@ -41,7 +41,7 @@ public class StudentController {
     @PostMapping("/courses/enroll/{courseId}")
     public ResponseEntity<UpdateCourseRequest> enroll(@PathVariable Long courseId, @RequestHeader("Authorization") String jwt){
         Student student = studentService.getStudentByJWT(jwt);
-        Course course = studentService.addStudentToCourse(courseId, student);
+        Course course = courseService.addStudentToCourse(courseId, student);
         UpdateCourseRequest updateCourseRequest = new UpdateCourseRequest();
         updateCourseRequest.setName(course.getName());
         updateCourseRequest.setDescription(course.getDescription());

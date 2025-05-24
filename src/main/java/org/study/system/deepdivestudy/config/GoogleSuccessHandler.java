@@ -10,12 +10,13 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
-import org.study.system.deepdivestudy.service.AuthService;
-import org.study.system.deepdivestudy.service.UserService;
+import org.study.system.deepdivestudy.entity.users.Role;
+import org.study.system.deepdivestudy.service.RoleService;
 
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.List;
+import java.util.Optional;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 
@@ -23,7 +24,7 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 @RequiredArgsConstructor
 public class GoogleSuccessHandler implements AuthenticationSuccessHandler {
 
-    private final AuthService authService;
+    private final RoleService roleService;
     private final JwtUtils jwtUtils;
 
     @Value("${frontend.redirect}")
@@ -39,12 +40,12 @@ public class GoogleSuccessHandler implements AuthenticationSuccessHandler {
         OAuth2User oUser = (OAuth2User) authentication.getPrincipal();
         String email = oUser.getAttribute("email");
 
-        String role = authService.getRoleByEmail(email);
-        if (role == null) {
+        Optional<Role> roleByEmail = roleService.getRoleByEmail(email);
+        if (roleByEmail.isEmpty()) {
             resp.sendRedirect(roleSelectPage + "?email=" + URLEncoder.encode(email, UTF_8));
             return;
         }
-        var authorities = List.of((GrantedAuthority) () -> role);
+        var authorities = List.of((GrantedAuthority) () -> roleByEmail.get().getName().name());
         Authentication auth = new UsernamePasswordAuthenticationToken(email,null,authorities);
         String jwt = jwtUtils.generateToken(auth);
 
